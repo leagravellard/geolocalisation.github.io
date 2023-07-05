@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.round-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border: 5px solid black;
+    border-radius: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #45a049;
+}
+
+button {
+    background-color: #091a09; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Espace autour du texte */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Supprimer le soulignement */
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer; /* Changer le curseur en main lors du survol */
+    border: none; /* Supprimer la bordure */
+    border-radius: 6px; /* Coins arrondis */
+}
+
+button:hover {
+    background-color: #0dee18; /* Changer la couleur de fond lors du survol */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #008000; /* Couleur de fond vert */
+    overflow: hidden; /* Cache les animations qui dépassent les limites du corps */
+    position: relative; /* Permet de positionner les éléments enfants absolument */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    animation: neon 1s infinite;
+}
+
+@keyframes neon {
+    0% { background-color: #98c998; }
+    50% { background-color: #000000; }
+    100% { background-color: #98c998; }
+}
+
+
+

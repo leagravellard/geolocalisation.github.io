@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles2.css">
+    <title>Code QR</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="qrcode"></div>
+        <button onclick="shareByEmail()">Partager par e-mail</button>
+    </div>
+    <script>
+        // Récupérer les coordonnées de l'URL
+        var params = new URLSearchParams(window.location.search);
+        var latitude = params.get('lat');
+        var longitude = params.get('lon');
+
+        // Générer l'URL de Google Maps
+        var mapsUrl = `https://www.google.com/maps/place/${latitude},${longitude}`;
+
+        // Générer le code QR
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: mapsUrl,
+            width: 450,
+            height: 450
+        });
+
+        function shareByEmail() {
+            var subject = "Voici ma position";
+            var body = "Voici ma position sur Google Maps : " + mapsUrl;
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
+</body>
+</html>

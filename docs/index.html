@@ -22,6 +22,9 @@
           
           console.log("Latitude : " + latitude);
           console.log("Longitude : " + longitude);
+
+          // Rediriger vers la page du code QR avec les coordonnées en paramètres d'URL
+          window.location.href = `qrcode.html?lat=${latitude}&lon=${longitude}`;
         }
 
         // Fonction de rappel en cas d'erreur lors de la récupération de la position
@@ -47,6 +50,6 @@
   <div class="round-box">
     <h1>Géolocalisation</h1>
     <button onclick="getLocation()">Obtenir la position</button>
-</div>
+  </div>
 </body>
 </html>
